@@ -55,7 +55,7 @@
                         </span>
                     </div>
                 </div>
-                    <span style="justify-content:center; display:flex;"><asp:Button ID="btnLogin" Width="100px" class="btn btn-primary btn-sm" runat="server" Text="Login" OnClick="btnLogin_Click" /></span><br />
+                    <span style="justify-content:center; display:flex;"><asp:Button ID="btnLogin" Width="100px" class="btn btn-success btn-sm" runat="server" Text="Login" OnClick="btnLogin_Click" /></span><br />
                     <span style="justify-content:center; display:flex;"><asp:Label ID="txtValidation" runat="server"></asp:Label></span><br />
                     <span style="justify-content:center; display:flex;"><a href="SignUp.aspx">Click here to register.</a>
                     If you do not have access to username or password.</span>
