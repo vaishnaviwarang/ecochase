@@ -1,0 +1,59 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="ecochase.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>ecochase - activity tracker</title>
+    <style>
+        footer{
+            text-align:center
+
+                }
+        table.center {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="jquery/jquery.3.7.0.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:Image ID="Image" runat="server" Height="200px" ImageUrl="~/Images/header1.jpg" Width="1550px" BorderWidth="0px" ImageAlign="Middle"/>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                        <li class="nav-item">
+                            <a class="navbar-brand" href="Home.aspx">ecochase</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="Home.aspx">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Scoreboard.aspx">Scoreboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="EditProfile.aspx">Edit Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="About.aspx">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ContactUs.aspx">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+        </nav>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+        </div>
+        <footer class="bg-dark text-light">
+            Copyright &copy; 2023 ecochase. All rights reserved.
+        </footer>
+</form>
+</body>
+</html>

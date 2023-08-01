@@ -1,0 +1,74 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="ecochase.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>ecochase - activity tracker</title>
+    
+
+    <style>
+        footer{
+            text-align:center
+
+                }
+        table.center {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .list-item-space{
+            margin-left:300px;
+        }
+        .list-item-space2{
+            margin-left:25px;
+        }
+    </style>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="jquery/jquery.3.7.0.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <%--<a href="Site.Master">Site.Master</a>--%>
+    <form id="form1" runat="server">
+        <asp:Image ID="Image" runat="server" Height="200px" ImageUrl="~/Images/header1.jpg" Width="1550px" BorderWidth="0px" ImageAlign="Middle"/>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ">
+                        <li class="nav-item list-item-space" style="vertical-align:bottom; font-weight:600; ">
+                            <a class="navbar-brand" style="color:#1c5e55;" href="Home.aspx">ecochase&#8482;</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="Home.aspx">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Scoreboard.aspx">Scoreboard</a>
+                        </li>
+                        <li class="nav-item" id="hideEdit" runat="server">
+                            <a class="nav-link" href="EditProfile.aspx">Edit Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="About.aspx">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ContactUs.aspx">Contact Us</a>
+                        </li>
+                        <li class="nav-item list-item-space2" style="font-weight:500;">
+                            <a class="nav-link" ><i>Welcome! @<%:Session["username"]%></i></a>
+                        </li>
+                        <li class="nav-item " style="font-weight:500;" >
+                            <a class="nav-link" href="Logout.aspx">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+        </nav>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+        </div>
+        <footer class="bg-dark text-light">
+            Copyright &copy; 2023 ecochase. All rights reserved.
+        </footer>
+</form>
+</body>
+</html>
